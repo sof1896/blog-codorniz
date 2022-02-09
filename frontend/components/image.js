@@ -5,14 +5,16 @@ const Image = ({ image }) => {
   const { alternativeText, width, height } = image.data.attributes;
 
   return (
+    <div className="miniatura">
     <NextImage
       layout="responsive"
       width={width}
-      height={height}
+      height={height} 
       objectFit="contain"
       src={getStrapiMedia(image)}
       alt={alternativeText || ""}
     />
+    </div>
   );
 };
 

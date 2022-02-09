@@ -27,9 +27,9 @@ const Article = ({ article, categories }) => {
         data-srcset={imageUrl}
         data-uk-img
       >
-        <h1>{article.attributes.title}</h1>
+        <h1 className="title__article">{article.attributes.title}</h1>
       </div>
-      <div className="uk-section">
+      <div className="uk-section uk-section_article">
         <div className="uk-container uk-container-small">
           <ReactMarkdown children={article.attributes.content} />
           <hr className="uk-divider-small" />
@@ -54,7 +54,7 @@ const Article = ({ article, categories }) => {
             </div>
             <div className="uk-width-expand">
               <p className="uk-margin-remove-bottom">
-                By {article.attributes.author.data.attributes.name}
+                Por: {article.attributes.author.data.attributes.name}
               </p>
               <p className="uk-text-meta uk-margin-remove-top">
                 <Moment format="MMM Do YYYY">

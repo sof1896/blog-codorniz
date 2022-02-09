@@ -12,10 +12,15 @@ const Card = ({ article }) => {
           </div>
           <div className="uk-card-body">
             <p id="category" className="uk-text-uppercase">
-              {article.attributes.category.data.attributes.name}
+              <span>{article.attributes.category.data.attributes.name}</span>
             </p>
             <p id="title" className="uk-text-large">
               {article.attributes.title}
+
+              <p id="description" className="uk-text-desc">
+              {article.attributes.description}</p>
+
+            <p className="boton"><span className="boton__card">Leer más</span></p>
             </p>
           </div>
         </div>
